@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Image</title>
+</head>
+<body>
+    <select onchange="change_pic(this.value)">
+        <option value="jakarta">Jakarta</option>
+        <option value="jogja">Jogja</option>
+        <option value="padang">Padang</option>
+        <option value="palembang">Palembang</option>
+        <option value="toraja">Toraja</option>
+    </select> <br>
+    <img src="" id="gambar" alt="">
+    <script>
+        function change_pic(set) {
+            var photo
+            if(set == 'jakarta'){
+                photo = "img/jakarta.jpg"
+                alert('Jakarta kota limpahan ilusi, mimpi-mimpi warga yang tak bisa terbeli.')
+            } else if(set == 'jogja'){
+                photo = "img/jogja.jpg"
+                alert('Jika memang benar Jogja itu istimewa, dari sini mestinya muncul generasi pemimpin berikutnya.')
+            } else if(set == 'padang'){
+                photo = "img/padang.jpg"
+                alert('Kota Padang adalah kota terbesar di pantai barat Pulau Sumatra dan ibu kota provinsi Sumatra Barat, Indonesia. Kota ini merupakan pintu gerbang barat Indonesia dari Samudra Hindia.')
+            } else if(set == 'palembang'){
+                photo = "img/palembang.jpg"
+                alert('Kota Palembang adalah ibu kota provinsi Sumatra Selatan. Palembang adalah kota terbesar kedua di Sumatra setelah Medan.')
+            } else if(set == 'toraja'){
+                photo = "img/toraja.jpg"
+                alert('Suku Toraja yang mendiami daerah pegunungan dan mempertahankan gaya hidup yang khas dan masih menunjukkan gaya hidup Austronesia yang asli dan mirip dengan budaya Nias.')
+            }
+            console.log(photo);
+            document.getElementById("gambar").src = photo
+        }
+    </script>
+    
+</body>
+</html>
