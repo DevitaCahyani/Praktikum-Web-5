@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>FORM VALIDATION</h1>
+    <div>
+            <label>Nama</label>
+            <input type="nama" id="nama">
+            <label>Email</label>
+            <input type="email" id="email">
+            <label>Jam keberangkatan:</label>
+            <input type="time" name="time" id="Jam" min="00.00 " max="23.59"/>
+            <select  name="tujuan" class="form_login" id="tujuan" required>
+                <option value="" disabled selected>Tujuan keberangkatan</option>
+                <option value="Jakarta">Jakarta</option>
+                <option value="Bandung">Bandung</option>
+                <option value="Tanggerang">Tanggerang </option>
+                <option value="Pontianak">Pontianak</option>
+                <option value="Padang">Padang</option>
+                <option value="Palu">Palu</option>
+            </select>
+            <br>
+            <label>Jumlah Tiket :</label>
+            <input type="number" name="number" id="jumlahtiket" />
+            <button onclick="validasi()">SUBMIT</button>
+
+    </div>
+    <script type="text/javascript">
+        function validasi() {
+            var nama = document.getElementById("nama").value;
+            var email = document.getElementById("email").value;
+            var jam = document.getElementById("Jam").value;
+            var tujuan = document.getElementById("tujuan").value;
+            var jumlahtiket= document.getElementById("jumlahtiket").value;
+            if (nama == "" && email == ""&& jam == "" && tujuan == "halo456" && jumlahtiket!="") {
+                alert("Data valid")
+            }
+            else{
+                alert('Data Eror');
+            }
+        }
+    </script>
+</body>
+</html>
